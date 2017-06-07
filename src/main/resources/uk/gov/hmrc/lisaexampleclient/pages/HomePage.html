@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>LISA HMRC Example API Access</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="/" class="header--logo">Sample Bank</a>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="">Page One</a></li>
+                <li><a href="">Page Two</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <section class="hero">
+        <div class="container">
+            <header>
+                <h1 class="hero--heading">Account Login</h1>
+            </header>
+            <p class="hero--text">Select the type of account you would like to login to</p>
+        </div>
+    </section>
+    <main class="container main">
+
+
+        <div id="boxes" class="container--box">
+            <div class="box">
+                <h2>Trusted Admin</h2>
+                <a class="btn" id="ta" href="#">Trusted Admin</a>
+            </div>
+
+            <div class="box">
+                <h2>LISA Managers</h2>
+                <a class="btn" id="lm" href="#">Lifetime ISA Manager</a>
+            </div>
+        </div>
+
+        <hr>
+
+        <form id="formTA" action="/ta">
+            <h2>Trusted Admin Login</h2>
+            <div class="field">
+                <label for="username">Username</label>
+                <input id="username" type="text">
+            </div>
+            <div class="field">
+                <label for="password">Password</label>
+                <input id="password" type="password">
+            </div>
+            <div class="field">
+                <!--<input class="btn" type="submit">-->
+                <a class="btn" wicket:id="admin">Trusted Admin</a>
+            </div>
+        </form>
+
+
+        <form id="formLM" action="/lm">
+            <h2>LISA Manager Login</h2>
+            <div class="field">
+                <label for="username">Username</label>
+                <input id="username" type="text">
+            </div>
+            <div class="field">
+                <label for="password">Password</label>
+                <input id="password" type="password">
+            </div>
+            <div class="field">
+                <!--<input class="btn" type="submit">-->
+                <a class="btn" wicket:id="lisa">Lifetime ISA Manager</a>
+            </div>
+        </form>
+
+    </main>
+<footer class="footer">
+    <div class="container">
+        <p>&copy; Sample Bank 2017</p>
+    </div>
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>

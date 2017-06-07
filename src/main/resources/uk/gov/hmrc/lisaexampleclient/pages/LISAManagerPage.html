@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>LISA HMRC Example API Access</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <a href="/" class="header--logo">Sample Bank</a>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="">Page One</a></li>
+                <li><a href="">Page Two</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <header>
+            <h1 class="hero--heading">Create Life Event</h1>
+        </header>
+        <p class="hero--text">Use the form below to create a new life event</p>
+    </div>
+</section>
+<main class="container main">
+
+    <div class="message alert--danger" wicket:id="warning">Server session to HMRC Lifetime ISA API is not valid. Please
+        contact a Trusted Admin
+    </div>
+
+    <div>
+        <form wicket:id="lisaform">
+            <h2>Create Life Event</h2>
+            <div class="field">
+                <label wicket:for="managerId">Manager ID</label>
+                <input wicket:id="managerId" type="text">
+            </div>
+            <div class="field">
+                <label wicket:for="accountId">Account ID</label>
+                <input wicket:id="accountId" type="text">
+            </div>
+            <div class="field">
+                <label wicket:for="date">Date</label>
+                <input wicket:id="date" type="text">
+            </div>
+            <div class="field">
+                <label wicket:for="type">Event Type</label>
+                <div class="select--styled">
+                    <select wicket:id="type">
+                        <option value="">Please Select</option>
+                        <option value="">Option One</option>
+                        <option value="">Option Two</option>
+                    </select>
+                    <br/>
+                </div>
+            </div>
+            <div class="field field--last">
+                <input wicket:id="submit" class="btn" type="submit" value="Create Event">
+            </div>
+        </form>
+
+        <div wicket:id="feedback">[[Your Event ID is <strong>12345</strong>]]</div>
+
+
+    </div>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; Sample Bank 2017</p>
+    </div>
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>LISA HMRC Example API Access</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <a href="/" class="header--logo">Sample Bank</a>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="">Page One</a></li>
+                <li><a href="">Page Two</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <header>
+            <h1 class="hero--heading">Access Validation</h1>
+        </header>
+        <p class="hero--text">See below for the expiry date of your current token</p>
+    </div>
+</section>
+<main class="container main">
+
+    <p>Current access token is <strong>valid until <time wicket:id="accessValidUntil">25/04/2017</time></strong></p>
+    <p>Don't worry, this token will reset automatically until <time wicket:id="refreshDue">25/04/17</time></p>
+    <p>To sign-in again and create a new authentication session, please click here.</p>
+    <a href="" class="btn">Reset Token</a>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; Sample Bank 2017</p>
+    </div>
+</footer>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>

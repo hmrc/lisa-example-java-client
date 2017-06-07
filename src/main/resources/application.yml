@@ -1,0 +1,15 @@
+server:
+    port: 8088
+    
+logging:
+    level:
+        uk.co.crystalmark: DEBUG
+
+tax:
+    authUrl: https://test-api.service.hmrc.gov.uk/
+    clientId: change-me
+    secret: change-me
+    redirectUrl: https://localhost/admin
+    scope: write:lisa
+    createLifeEventUrl: ${tax.authUrl}lifetime-isa/manager/{lisaManagerReferenceNumber}/accounts/{accountID}/events
+
